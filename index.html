@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raycaster</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+    <script src="canvas.js" type="module"></script>
+</head>
+<body>
+    <canvas id="canvas" width="320" height="320" id="canvas"></canvas>
+
+    <div id = "settings-container">
+        <label >
+            <input type="checkbox" id="draw-3d-view" checked>
+            <label for="draw-3d-view" name="display-setting" id="draw-3d-view-label" class="setting-value">3D View</label>
+        </label>
+
+        <label >
+            <input type="checkbox" id="draw-shadows" checked>
+            <label for="draw-shadows" name="display-setting" id="draw-shadows-label" class="setting-value">3D Wall Shadows</label>
+        </label>
+
+        <form>
+            <output id="shadowIntensity">0.4</output>
+            <input type ="range" min="0" max="0.9" value="0.4" id="shadow-intensity-slider" step="0.1" oninput="shadowIntensity.value = this.value">
+            <label id="shadow-intensity-slider-label" class="setting-value">Shadow Intensity</label>
+        </form>
+
+        <form>
+            <output id="FOVNumber">60</output>
+            <input type="range" min="60" max="170" value="60" id="FOV-slider" oninput="FOVNumber.value = this.value">
+            <label id="FOV-slider-label" class="setting-value">Field of View</label class="setting-value">
+        </form>
+
+        <label>
+            <input type="color" id="wall-color-picker" value="#FFFFFF">
+            <label for="wall-color-picker" id="color-picker-label" class="setting-value">Wall Color</label>
+        </label>
+    </div>
+
+    <button type="button" id="settings-button">⚙</button>
+</body>
+</html>

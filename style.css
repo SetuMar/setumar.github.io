@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Roboto';
+    margin-right: 10px;
+}
+
+#settings-button {
+    position: absolute;
+    left: 1vw;
+    top: 1vh;
+    border-radius: 100px;
+    outline: none; /* Remove the outline */
+    box-shadow: none;
+    border: none;
+}
+
+#settings-button:focus {
+    border: none;
+    outline: none;
+}
+
+#settings-button:hover {
+    background-color: darkgrey;
+    color: white;
+    animation-duration: 1s;
+}
+
+#settings-button:active {
+    background-color: grey;
+    color: white;
+}
+
+@keyframes move-settings {
+    0% {
+      left: calc(100vw + var(--settings-width));
+    }
+    100% {
+      left: calc(100vw - var(--settings-width));
+    }
+}
+
+#settings-container{
+    --settings-width: 150vw;
+    height: 100vh;
+    width: var(--settings-width);
+
+    position: absolute;
+    top: 0vh;
+    left: calc(100vw + var(--settings-width));
+
+    color: white;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#FOV-slider {
+    overflow: hidden;
+    width: 25%;
+    margin-left: auto;
+    outline: none;
+    accent-color: green;
+    margin-right: 10px;
+}
+
+#wall-color-picker {
+    margin-left: auto;
+    /* margin-right: 10px; */
+}
+
+/* #draw-3d-view-label {
+    margin-right: 10px;
+}
+
+#color-picker-label {
+    margin-right: 10px;
+} */
+
+#wall-color-picker {
+    margin-left: 20px;
+}
+
+/* #FOV-slider-label {
+    margin-right: 10px;
+} */
+
+.setting-value {
+    margin-right: 10px;
+}
